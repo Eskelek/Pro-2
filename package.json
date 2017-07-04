@@ -1,0 +1,27 @@
+{
+  "name": "kod-project2",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "script.js",
+  "scripts": {
+    "test": "pro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Piotr Powroźnik",
+  "license": "ISC",
+  "dependencies": {
+    "packagejson": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
