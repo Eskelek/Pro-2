@@ -6,12 +6,8 @@ $(function () {
          
     intervalId = setInterval(changeRightSlide, 3000);
     
-    var liWidth = $(".imgSlider");
-    
-    console.log(liWidth.width);
-    
     function changeRightSlide() {
-        carouselList.animate({marginLeft: -1700}, 700, moveFirstSlide);
+        carouselList.animate({marginLeft: "-100%"}, 700, moveFirstSlide);
     }
     function changeLeftSlide() {
         moveLastSlide();
@@ -32,7 +28,7 @@ $(function () {
         var lastItem = carouselList.find("li:last");
         
         firstItem.before(lastItem);
-        carouselList.css({marginLeft: -1700});
+        carouselList.css({marginLeft: "-100%"});
     }
     
     var stopSlice = $("#carousel");
