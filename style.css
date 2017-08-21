@@ -28,22 +28,33 @@
 
 .hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   background: url("https://images.pexels.com/photos/7095/people-coffee-notes-tea.jpg?w=1260&h=750&auto=compress&cs=tinysrgb");
   background-size: cover;
   background-position: top; }
   .hero .menu {
     background-color: rgba(0, 0, 0, 0.4); }
+    .hero .menu .sort {
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid #d5472a;
+      opacity: 0;
+      position: absolute;
+      top: 5px;
+      right: 10%;
+      color: #d5472a;
+      cursor: pointer;
+      line-height: 30px; }
+      .hero .menu .sort i {
+        font-size: 20px;
+        color: #d5472a; }
     .hero .menu ul {
       text-align: center; }
-      .hero .menu ul .logo {
-        text-align: left;
-        font-size: 28px;
-        margin-right: 20%; }
-        .hero .menu ul .logo span {
-          color: #c8cace; }
       .hero .menu ul li {
+        font-size: 19px;
         float: none;
         line-height: 50px;
         display: inline-block;
@@ -51,17 +62,27 @@
         min-width: 150px;
         cursor: pointer; }
         .hero .menu ul li:hover a {
-          color: #06cbe5;
-          font-size: 20px; }
+          color: #d5472a;
+          font-weight: bold; }
+        .hero .menu ul li:hover {
+          background-color: rgba(0, 0, 0, 0.5); }
         .hero .menu ul li a {
           text-decoration: none;
           color: #fff; }
+      .hero .menu ul .logo {
+        text-align: left;
+        font-size: 28px;
+        margin-right: 20%; }
+        .hero .menu ul .logo:hover {
+          background-color: inherit; }
+        .hero .menu ul .logo span {
+          color: #c8cace; }
   .hero .title {
     color: #fff;
     text-align: center;
     position: absolute;
     top: 30%;
-    left: 50%;
+    margin-left: 50%;
     transform: translateX(-50%);
     text-shadow: 0px 0px 2px #000; }
     .hero .title .backTitle {
@@ -81,11 +102,6 @@
       border-radius: 5%;
       transition: linear .1s;
       cursor: pointer; }
-      .hero .title button:hover {
-        border: solid 1px #fff;
-        font-size: 17px;
-        width: 190px;
-        height: 75px; }
 
 .info {
   padding: 100px 0; }
@@ -98,8 +114,6 @@
       color: #737373; }
     .info .cust i, .info .responsive i, .info .design i, .info .clean i, .info .ready i, .info .download i, .info .cust p, .info .responsive p, .info .design p, .info .clean p, .info .ready p, .info .download p, .info .cust h3, .info .responsive h3, .info .design h3, .info .clean h3, .info .ready h3, .info .download h3 {
       padding: 10px; }
-  .info .ready h1 {
-    margin: 0; }
 
 .gallery {
   margin: 20px 0; }
@@ -110,10 +124,6 @@
     height: 300px;
     cursor: pointer;
     transition: .5s; }
-    .gallery .image:hover {
-      transform: scale(1.1);
-      transition: .5s;
-      z-index: 1; }
     .gallery .image .layer {
       text-align: center;
       width: 100%;
@@ -127,13 +137,9 @@
         font-size: 20px;
         padding: 10px; }
       .gallery .image .layer p, .gallery .image .layer h3 {
-        text-shadow: 1px 1px 1px #000;
+        text-shadow: 1px 1px 2px #000;
         position: relative;
         top: 45%; }
-      .gallery .image .layer:hover {
-        opacity: 0.8;
-        visibility: visible;
-        background-color: rgba(170, 56, 34, 0.9); }
     .gallery .image img {
       width: 100%;
       height: 100%; }
@@ -142,7 +148,10 @@
   margin: 60px auto 20px;
   min-height: 500px; }
   .team .person {
-    padding-right: 20px; }
+    padding-right: 20px;
+    max-width: 300px;
+    min-width: 240px;
+    margin: 0 auto; }
     .team .person h5 {
       color: #d5472a; }
     .team .person h5, .team .person h1 {
@@ -317,10 +326,6 @@
     border-radius: 2%;
     transition: linear .1s;
     cursor: pointer; }
-    .ready button:hover {
-      font-size: 16px;
-      width: 310px;
-      height: 45px; }
 
 footer {
   margin-top: 30px;
@@ -363,5 +368,231 @@ footer {
     background-color: #242F52; }
     footer .copyright h3 {
       text-align: center; }
+
+@media (min-width: 900px) {
+  .hero .title button:hover {
+    border: solid 1px #fff;
+    font-size: 17px;
+    width: 190px;
+    height: 75px; }
+  .gallery .image:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    z-index: 1; }
+  .gallery .image .layer:hover {
+    opacity: 0.8;
+    visibility: visible;
+    background-color: rgba(170, 56, 34, 0.9); }
+  .ready button:hover {
+    font-size: 16px;
+    width: 310px;
+    height: 45px; } }
+
+@media (max-width: 1600px) {
+  .hero .title {
+    top: 20%; }
+    .hero .title .backTitle {
+      padding: 10px; }
+      .hero .title .backTitle h1 {
+        font-size: 45px; }
+      .hero .title .backTitle p {
+        font-size: 16px; }
+  .hero .menu ul li {
+    line-height: 40px; }
+  .slider #carousel .list .build .inBuild {
+    padding: 20px; } }
+
+@media (max-width: 1280px) {
+  .hero .menu ul {
+    background-color: rgba(0, 0, 0, 0.4); }
+    .hero .menu ul .logo {
+      text-align: center;
+      margin-right: 0;
+      background-color: inherit; }
+    .hero .menu ul li {
+      float: left;
+      padding: 5px 0; }
+  .hero .title {
+    top: 50%; }
+    .hero .title button {
+      margin-top: 10%; }
+    .hero .title .backTitle {
+      padding: 5px; }
+      .hero .title .backTitle h1 {
+        font-size: 30px; }
+      .hero .title .backTitle p {
+        font-size: 14px; }
+  .gallery .image .layer {
+    opacity: 1; }
+  .team .person {
+    padding-right: 0; }
+  .slider #carousel .button {
+    opacity: 1; }
+  .slider #carousel .list .build .inBuild h2 {
+    padding: 20px;
+    font-size: 30px; }
+  .slider #carousel .list .build .inBuild p {
+    font-size: 16px; }
+  .slider #carousel .list .build .inBuild button {
+    margin-top: 30px; } }
+
+@media (max-width: 1000px) {
+  .hero .title p {
+    display: none; }
+  .slider #carousel {
+    height: 350px; }
+    .slider #carousel ul li {
+      height: 350px; }
+    .slider #carousel .list .boss .inBoss {
+      padding: 25px; }
+      .slider #carousel .list .boss .inBoss p {
+        padding: 20px; }
+    .slider #carousel .list .build .inBuild {
+      padding: 10px; }
+      .slider #carousel .list .build .inBuild h2 {
+        padding: 10px;
+        font-size: 25px; }
+      .slider #carousel .list .build .inBuild p {
+        font-size: 16px;
+        padding: 5px; }
+      .slider #carousel .list .build .inBuild button {
+        margin-top: 15px;
+        width: 160px;
+        height: 40px; }
+    .slider #carousel .list .balance .inBalance {
+      padding: 20px; }
+      .slider #carousel .list .balance .inBalance h1 {
+        font-size: 25px; }
+      .slider #carousel .list .balance .inBalance h1, .slider #carousel .list .balance .inBalance h3, .slider #carousel .list .balance .inBalance p {
+        padding: 8px; }
+    .slider #carousel .list .we .inWe {
+      margin: 20px auto; }
+      .slider #carousel .list .we .inWe h1, .slider #carousel .list .we .inWe h3, .slider #carousel .list .we .inWe p {
+        padding: 15px; }
+    .slider #carousel .list .happy .inHappy {
+      padding: 20px; }
+      .slider #carousel .list .happy .inHappy h2 {
+        padding: 20px;
+        font-size: 25px; }
+      .slider #carousel .list .happy .inHappy p {
+        padding: 12px; } }
+
+@media (max-width: 750px) {
+  .hero .title button {
+    height: 50px; }
+  .hero .title .backTitle h1 {
+    font-size: 22px; }
+  .hero .menu ul li {
+    line-height: 28px;
+    font-size: 18px; }
+  .hero .menu ul .logo {
+    font-size: 22px; }
+  .info {
+    padding: 50px 0; }
+    .info .cust, .info .responsive, .info .design, .info .clean, .info .ready, .info .download {
+      padding: 15px; }
+      .info .cust h3, .info .responsive h3, .info .design h3, .info .clean h3, .info .ready h3, .info .download h3 {
+        font-size: 18px; }
+      .info .cust p, .info .responsive p, .info .design p, .info .clean p, .info .ready p, .info .download p {
+        display: none; }
+      .info .cust i, .info .responsive i, .info .design i, .info .clean i, .info .ready i, .info .download i {
+        font-size: 70px; }
+  .team {
+    text-align: center; }
+    .team .person p {
+      display: none; }
+  .slider #carousel {
+    height: 250px; }
+    .slider #carousel ul li {
+      height: 250px; }
+    .slider #carousel .list .boss .inBoss {
+      padding: 10px; }
+      .slider #carousel .list .boss .inBoss h2 {
+        font-size: 17px; }
+      .slider #carousel .list .boss .inBoss p {
+        font-size: 14px;
+        padding: 8px; }
+    .slider #carousel .list .build .inBuild {
+      padding: 3px; }
+      .slider #carousel .list .build .inBuild h2 {
+        padding: 5px;
+        font-size: 18px; }
+      .slider #carousel .list .build .inBuild p {
+        font-size: 14px;
+        padding: 3px; }
+      .slider #carousel .list .build .inBuild button {
+        margin-top: 5px;
+        height: 30px;
+        font-size: 12px; }
+    .slider #carousel .list .balance .inBalance {
+      padding: 7px; }
+      .slider #carousel .list .balance .inBalance h1 {
+        font-size: 18px; }
+      .slider #carousel .list .balance .inBalance h3 {
+        font-size: 17px; }
+      .slider #carousel .list .balance .inBalance p {
+        font-size: 15px; }
+      .slider #carousel .list .balance .inBalance h1, .slider #carousel .list .balance .inBalance h3, .slider #carousel .list .balance .inBalance p {
+        padding: 5px; }
+    .slider #carousel .list .we .inWe {
+      margin: 15px auto; }
+      .slider #carousel .list .we .inWe h1, .slider #carousel .list .we .inWe h3, .slider #carousel .list .we .inWe p {
+        padding: 10px; }
+      .slider #carousel .list .we .inWe h1 {
+        font-size: 20px; }
+      .slider #carousel .list .we .inWe h3 {
+        font-size: 17px; }
+      .slider #carousel .list .we .inWe p {
+        font-size: 14px; }
+    .slider #carousel .list .happy .inHappy {
+      padding: 10px; }
+  .ready {
+    padding: 20px; }
+  footer .footerInfo .location, footer .footerInfo .share, footer .footerInfo .activeBox {
+    padding: 20px 0; } }
+
+@media (max-width: 600px) {
+  .info {
+    padding: 20px; }
+    .info .cust, .info .responsive, .info .design, .info .clean, .info .ready, .info .download {
+      padding: 5px; }
+  .slider #carousel .list .build .inBuild h2 {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  .slider #carousel .list .build .inBuild p {
+    display: none; }
+  footer .footerInfo .location, footer .footerInfo .share, footer .footerInfo .activeBox {
+    padding: 5px 5px; }
+    footer .footerInfo .location h2, footer .footerInfo .share h2, footer .footerInfo .activeBox h2 {
+      font-size: 18px; }
+    footer .footerInfo .location p, footer .footerInfo .share p, footer .footerInfo .activeBox p {
+      font-size: 14px; }
+  footer .copyright {
+    font-size: 10px;
+    padding: 5px; } }
+
+@media (max-width: 500px) {
+  .hero .menu .sort {
+    opacity: 1; }
+  .hero .menu .show {
+    font-size: 16px;
+    line-height: 36px;
+    display: none;
+    background-color: #000; }
+  .hero .title {
+    top: 23%; }
+    .hero .title button {
+      height: 40px;
+      margin-top: 20px; }
+    .hero .title .backTitle h1 {
+      font-size: 25px; }
+    .hero .title .backTitle p {
+      font-size: 18px; }
+  .team .person {
+    float: none; }
+  .gallery .image {
+    height: 250px; }
+  .slider {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

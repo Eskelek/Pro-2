@@ -11,9 +11,7 @@ $(function () {
     }
     function changeLeftSlide() {
         moveLastSlide();
-        carouselList.animate({
-            marginLeft: 0
-        }, 700);
+        carouselList.animate({marginLeft: 0}, 700);
     }
     
     function moveFirstSlide() {
@@ -50,5 +48,19 @@ $(function () {
     
     $(lArrowClick).click(function () {
         changeLeftSlide();
+    });
+    //menu -500px 
+    var back = $(".title")
+    var sort = $(".sort");
+    var show = $(".show");
+    
+    sort.click(function(){
+        if($(".show").is(':visible')){
+            show.slideUp();
+            back.slideDown();
+        }else {
+            show.slideDown();
+            back.slideUp();
+        }
     });
 });
