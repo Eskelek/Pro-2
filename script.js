@@ -1,6 +1,6 @@
 $(function () {
     "use strict";
-    
+    //carousel
     var carouselList = $("#carousel ul"),
         intervalId;
          
@@ -38,7 +38,7 @@ $(function () {
     $(stopSlice).mouseout(function () {
         intervalId = setInterval(changeRightSlide, 3000);
     });
-    
+    //carousel button
     var rArrowClick = $("#right");
     var lArrowClick = $("#left");
     
@@ -49,6 +49,7 @@ $(function () {
     $(lArrowClick).click(function () {
         changeLeftSlide();
     });
+    
     //menu -500px 
     var back = $(".title")
     var sort = $(".sort");
@@ -63,4 +64,5 @@ $(function () {
             back.slideUp();
         }
     });
+    
 });
