@@ -2,6 +2,7 @@
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*Colors */
@@ -83,6 +84,7 @@
     position: absolute;
     top: 30%;
     margin-left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     text-shadow: 0px 0px 2px #000; }
     .hero .title .backTitle {
@@ -100,6 +102,7 @@
       background-color: #d5472a;
       border: none;
       border-radius: 5%;
+      -webkit-transition: linear .1s;
       transition: linear .1s;
       cursor: pointer; }
 
@@ -123,6 +126,7 @@
     margin: 0;
     height: 300px;
     cursor: pointer;
+    -webkit-transition: .5s;
     transition: .5s; }
     .gallery .image .layer {
       text-align: center;
@@ -178,13 +182,17 @@
       line-height: 35px;
       cursor: pointer; }
       .team .person .fa:hover {
+        -webkit-transform: scale(1.1);
         transform: scale(1.1); }
     .team .person .teamImage {
       margin-left: 50%;
+      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       width: 100%;
       height: 250px;
+      -o-object-fit: cover;
       object-fit: cover;
+      -o-object-position: top;
       object-position: top; }
 
 .slider {
@@ -242,6 +250,7 @@
           background-color: #d5472a;
           border: none;
           border-radius: 5%;
+          -webkit-transition: linear .1s;
           transition: linear .1s;
           cursor: pointer; }
           .slider #carousel .list .build .inBuild button:hover {
@@ -291,6 +300,7 @@
       margin: 0;
       position: absolute;
       top: 50%;
+      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       height: 100px;
       width: 35px;
@@ -304,31 +314,39 @@
       font-size: 80px;
       color: #000; }
 
-.mobileSlider {
-  display: none;
-  position: relative; }
-  .mobileSlider .background {
-    width: 100vw;
-    height: 100vh; }
-  .mobileSlider .services {
+.mobileSlider h1 {
+  text-align: left;
+  font-size: 30px;
+  margin: 20px auto 20px 10px; }
+
+.mobileSlider .list .listItem {
+  color: #fff;
+  position: relative;
+  text-shadow: 0 0 1px #000; }
+  .mobileSlider .list .listItem p {
+    padding: 0 30px 0 10px;
+    background-color: #d5472a;
+    list-style-type: none;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: left;
+    -webkit-box-shadow: 0px 0px 5px #000;
+    box-shadow: 0px 0px 5px #000; }
+  .mobileSlider .list .listItem i {
+    text-align: center;
+    font-size: 20px;
     position: absolute;
-    top: 10%;
-    padding: 5px; }
-    .mobileSlider .services h1 {
-      font-size: 30px;
-      text-decoration: underline;
-      color: #fff;
-      text-shadow: 2px 2px 1px #000;
-      padding: 15px 0 50px; }
-    .mobileSlider .services .list {
-      background: rgba(0, 0, 0, 0.3);
-      padding-left: 10%;
-      font-size: 25px;
-      text-shadow: 1px 1px 0px #000;
-      color: #fff;
-      line-height: 40px; }
-      .mobileSlider .services .list li {
-        border-bottom: 1px solid #737373; }
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px; }
+  .mobileSlider .list .listItem .hide {
+    font-size: 14px;
+    line-height: 25px;
+    display: none;
+    background-color: #fff9e6;
+    color: #000;
+    border: 2px solid #000; }
 
 .ready {
   padding: 80px;
@@ -345,6 +363,7 @@
     font-size: 14px;
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     color: #fff;
     width: 300px;
@@ -352,6 +371,7 @@
     background-color: #d5472a;
     border: none;
     border-radius: 2%;
+    -webkit-transition: linear .1s;
     transition: linear .1s;
     cursor: pointer; }
 
@@ -381,6 +401,7 @@ footer {
         cursor: pointer; }
         footer .footerInfo .share .i .fa:hover {
           color: #FFF;
+          -webkit-transform: scale(1.2);
           transform: scale(1.2); }
       footer .footerInfo .share .i .fa-twitter:hover {
         background-color: #4099FF; }
@@ -501,7 +522,9 @@ footer {
     width: 190px;
     height: 75px; }
   .gallery .image:hover {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: .5s;
     transition: .5s;
     z-index: 1; }
   .gallery .image .layer:hover {
@@ -656,6 +679,6 @@ footer {
     font-size: 25px; }
   .mobileSlider .services .list {
     font-size: 20px;
-    line-height: 30px; } }
-
-/*# sourceMappingURL=style.css.map */
+    line-height: 30px; }
+  .ready button {
+    width: 90%; } }

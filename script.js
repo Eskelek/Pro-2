@@ -50,19 +50,33 @@ $(function () {
         changeLeftSlide();
     });
     
-    //menu -500px 
-    var back = $(".title")
+    //menu -500px
+    var back = $(".title");
     var sort = $(".sort");
     var show = $(".show");
     
-    sort.click(function(){
-        if($(".show").is(':visible')){
+    $(sort).click(function () {
+        if ($(".show").is(':visible')) {
             show.slideUp();
             back.slideDown();
-        }else {
+        } else {
             show.slideDown();
             back.slideUp();
         }
     });
     
+    //mobileSlider
+    var pHide = $(".hide");
+    var buttonShow = $(".listItem");
+    
+    console.log(pHide);
+    
+    $(buttonShow[0]).click(function () {
+        if ($(".hide").is(':visible')) {
+            pHide.slideUp();
+        } else {
+            pHide.slideDown();
+        }
+    });
+        
 });
